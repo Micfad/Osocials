@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>dash</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <div class="d-flex full-height">
+        <div id="menu_div" class="menu-div">
+            <div class="text-center logo-div">
+                <img id="dash_logo" class="logo-img" src="assets/img/OS%20Logo.png">
+                <img id="close_menu" src="assets/img/icons8-close-50.png">
+            </div>
+            <div id="OVERVIEW" class="nav-options overview" onclick="navigate('overview.html')">
+                <div class="d-flex nav_divs">
+                    <img src="assets/img/icons8-grid-50.png" class="nav-icon">
+                    <div><strong class="nav-text overview-text">Overview</strong></div>
+                </div>
+            </div>
+            <div class="nav-options task-center" onclick="navigate('task-center.html')">
+                <div class="d-flex nav_divs">
+                    <img src="assets/img/icons8-task-50.png" class="nav-icon">
+                    <div><span class="nav-text task-center-text">Task Center</span></div>
+                </div>
+            </div>
+            <div class="nav-options wallet" onclick="navigate('wallet.html')">
+                <div class="d-flex nav_divs">
+                    <img src="assets/img/icons8-wallet-50.png" class="nav-icon">
+                    <span class="nav-text wallet-text">Wallet</span>
+                </div>
+            </div>
+            <div class="nav-options task-btn">
+                <span class="create-task-text">Create Task</span>
+            </div>
+            <div class="nav-options support" onclick="navigate('support.html')">
+                <div class="d-flex nav_divs">
+                    <img src="assets/img/icons8-online-support-50.png" class="nav-icon">
+                    <div><span class="nav-text support-text">Support</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main_div" class="main-div">
+            <div class="text-end">
+                <img id="menu" src="assets/img/menu.png" class="menu-icon"> <!-- Replaced SVG with PNG -->
+            </div>
+            <div class="d-flex" id="sticky">
+                <div class="greeting">
+                    <span>Welcome,&nbsp;</span><span>Owner</span>
+                </div>
+                <div class="d-flex d-xl-flex justify-content-end align-items-xl-end notification-section">
+                    <img src="assets/img/icons8-bell-50.png" class="bell-icon">
+                    <div id="w_new" class="whats-new-box">
+                        <span class="whats-new-text">What's New?</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll_div">
+                <div class="row">
+                    <div class="col">
+                        <section id="c_tasks" class="cards task-card">
+                            <div class="d-flex">
+                                <img src="assets/img/icons8-task-50.png" class="card-icon">
+                                <span class="task-text">Task Done</span>
+                            </div>
+                            <div class="text-center task-count">
+                                <span>0</span>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col">
+                        <section id="t_ernings" class="cards earnings-card">
+                            <div class="d-flex">
+                                <img src="assets/img/icons8-earn-money-50.png" class="card-icon">
+                                <div class="earnings-text">Total Earnings</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="currency">N</span>
+                                <span class="earnings-amount">0</span>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col">
+                        <section id="F_balance" class="cards fund-card">
+                            <div class="d-flex">
+                                <img src="assets/img/icons8-wallet-50.png" class="card-icon">
+                                <div class="fund-text">Fund Balance</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="currency">N</span>
+                                <span class="fund-amount">0</span>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col">
+                        <section id="add_fund" class="cards add-fund-card">
+                            <div class="text-center add-fund-content">
+                                <img src="assets/img/icons8-add-50.png" class="add-fund-icon">
+                                <div class="add-fund-text">Add Funds</div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="transaction-section">
+                <div class="transactions-header">Transactions</div>
+                <div id="transaction_list" class="transaction-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dash.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
