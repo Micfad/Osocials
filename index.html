@@ -35,7 +35,7 @@
             <div class="nav-options task-btn">
                 <span class="create-task-text">Create Task</span>
             </div>
-            <div class="nav-options support" onclick="navigate('support.html')">
+            <div class="nav-options-support" onclick="navigate('support.html')">
                 <div class="d-flex nav_divs">
                     <img src="assets/img/icons8-online-support-50.png" class="nav-icon">
                     <div><span class="nav-text support-text">Support</span></div>
@@ -44,24 +44,29 @@
         </div>
 
         <div id="main_div" class="main-div">
-            <div class="text-end">
-                <img id="menu" src="assets/img/menu.png" class="menu-icon"> <!-- Replaced SVG with PNG -->
+            <div class="mobile_menu">
+                <div class="text-end1">
+                    <img  src="assets/img/MAIN LOGO 1.png" class="main_div_logo"> <!-- Replaced SVG with PNG -->
+                </div>
+                <div class="text-end">
+                    <img id="menu" src="assets/img/icons8-menu-50.png" class="menu-icon"> <!-- Replaced SVG with PNG -->
+                </div>
             </div>
-            <div class="d-flex" id="sticky">
+            <div id="sticky">
                 <div class="greeting">
                     <span>Welcome,&nbsp;</span><span>Owner</span>
                 </div>
-                <div class="d-flex d-xl-flex justify-content-end align-items-xl-end notification-section">
+                <div class="notification-section">
                     <img src="assets/img/icons8-bell-50.png" class="bell-icon">
                     <div id="w_new" class="whats-new-box">
                         <span class="whats-new-text">What's New?</span>
                     </div>
                 </div>
             </div>
-            <div class="scroll_div">
+            <div class="">
                 <div class="row">
                     <div class="col">
-                        <section id="c_tasks" class="cards task-card">
+                        <section id="c_tasks" class="cards">
                             <div class="d-flex">
                                 <img src="assets/img/icons8-task-50.png" class="card-icon">
                                 <span class="task-text">Task Done</span>
@@ -77,7 +82,7 @@
                                 <img src="assets/img/icons8-earn-money-50.png" class="card-icon">
                                 <div class="earnings-text">Total Earnings</div>
                             </div>
-                            <div class="text-center">
+                            <div class="card_txt2">
                                 <span class="currency">N</span>
                                 <span class="earnings-amount">0</span>
                             </div>
@@ -89,7 +94,7 @@
                                 <img src="assets/img/icons8-wallet-50.png" class="card-icon">
                                 <div class="fund-text">Fund Balance</div>
                             </div>
-                            <div class="text-center">
+                            <div class="card_txt2">
                                 <span class="currency">N</span>
                                 <span class="fund-amount">0</span>
                             </div>
