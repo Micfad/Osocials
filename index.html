@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="dash.css">
 </head>
 <body>
+    <div class="systemDiv"></div>
+        <span id="system_span1"></span>
+        <span id="system_span2"></span>
+    </div>
     <div class="d-flex full-height">
         <div id="menu_div" class="menu-div">
             <div class="text-center logo-div">
                 <img id="dash_logo" class="logo-img" src="assets/img/OS%20Logo.png">
                 <img id="close_menu" src="assets/img/icons8-close-50.png">
             </div>
-            <div id="OVERVIEW" class="nav-options overview" onclick="navigate('overview.html')">
+            <div id="OVERVIEW" class="nav-options overview" onclick="navigate('page_elements/overview.html')">
                 <div class="d-flex nav_divs">
                     <img src="assets/img/icons8-grid-50.png" class="nav-icon">
                     <div><strong class="nav-text overview-text">Overview</strong></div>
                 </div>
             </div>
-            <div class="nav-options task-center" onclick="navigate('task-center.html')">
+            <div class="nav-options task-center" onclick="navigate('page_elements/task_center.html')">
                 <div class="d-flex nav_divs">
                     <img src="assets/img/icons8-task-50.png" class="nav-icon">
                     <div><span class="nav-text task-center-text">Task Center</span></div>
                 </div>
             </div>
-            <div class="nav-options wallet" onclick="navigate('wallet.html')">
+            <div class="nav-options wallet" onclick="navigate('page_elements/wallet.html')">
                 <div class="d-flex nav_divs">
                     <img src="assets/img/icons8-wallet-50.png" class="nav-icon">
                     <span class="nav-text wallet-text">Wallet</span>
@@ -63,57 +67,18 @@
                     </div>
                 </div>
             </div>
-            <div class="">
-                <div class="row">
-                    <div class="col">
-                        <section id="c_tasks" class="cards">
-                            <div class="d-flex">
-                                <img src="assets/img/icons8-task-50.png" class="card-icon">
-                                <span class="task-text">Task Done</span>
-                            </div>
-                            <div class="text-center task-count">
-                                <span>0</span>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col">
-                        <section id="t_ernings" class="cards earnings-card">
-                            <div class="d-flex">
-                                <img src="assets/img/icons8-earn-money-50.png" class="card-icon">
-                                <div class="earnings-text">Total Earnings</div>
-                            </div>
-                            <div class="card_txt2">
-                                <span class="currency">N</span>
-                                <span class="earnings-amount">0</span>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col">
-                        <section id="F_balance" class="cards fund-card">
-                            <div class="d-flex">
-                                <img src="assets/img/icons8-wallet-50.png" class="card-icon">
-                                <div class="fund-text">Fund Balance</div>
-                            </div>
-                            <div class="card_txt2">
-                                <span class="currency">N</span>
-                                <span class="fund-amount">0</span>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col">
-                        <section id="add_fund" class="cards add-fund-card">
-                            <div class="text-center add-fund-content">
-                                <img src="assets/img/icons8-add-50.png" class="add-fund-icon">
-                                <div class="add-fund-text">Add Funds</div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-            <div class="transaction-section">
-                <div class="transactions-header">Transactions</div>
-                <div id="transaction_list" class="transaction-list"></div>
-            </div>
+
+
+     <div id="load_part" class="load_part">
+    <!--inside dynamic  container ----------------------------------------------------------------------------------------- -->
+               
+            
+     <!-- ______________inside dynamic  container ___________end___________________-->
+    </div>
+          
+            
+
+
         </div>
     </div>
 

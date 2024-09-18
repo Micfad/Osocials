@@ -1,0 +1,100 @@
+.a_scroll_div > div {
+    width: 100%;
+    background: #fff2f2;
+    border-radius: 22px;
+    padding-top: 16px;
+}
+
+#available_task_click,
+#created_task_click,
+#completed_task_click,
+#rejected_task_click {
+    padding: 0 5px;
+    text-align: center;
+    color: #7a040f;
+    width: 150px;
+}
+
+#available_task_indicator {
+    width: 100%;
+    height: 4px;
+    background: #910909;
+    margin-top: 6px;
+}
+
+.a_d-flex {
+    display: flex;
+}
+
+#back_task_click {
+    margin-top: 39px;
+    width: 300px;
+    min-width: 150px;
+}
+
+#back_task_click img {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+}
+
+#backSpanDiv {
+    padding-bottom: 2px;
+}
+
+#more_task_click img {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+}
+
+#moreSpanDiv {
+    padding-bottom: 2px;
+}
+
+.task-amount-display {
+    text-align: center;
+    width: 150px;
+    padding: 0 5px;
+    min-width: 100px;
+}
+
+.points,
+.dates {
+    margin-top: 38px;
+    min-width: 60px;
+    width: 200px;
+    padding: 0 5px;
+    text-align: center;
+}
+
+.tasks_loop_divs {
+    height: 50px;
+    padding: 7px;
+    border-top-style: solid;
+    border-top-color: #ffffff;
+}
+
+.tasks_click_divs {
+    width: 300px;
+    min-width: 150px;
+    padding-top: 3px;
+}
+
+.tasks_click_divs img {
+    width: 20px;
+    height: 17px;
+    margin-top: 5px;
+}
+
+#task_txt {
+    margin-left: 8px;
+}
+
+#points,
+#points-1 {
+    width: 200px;
+    min-width: 50px;
+    padding-left: 5px;
+    text-align: center;
+}
