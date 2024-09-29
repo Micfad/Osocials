@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+    <link rel="stylesheet" href="assets/css/create_task.css">
+    <link rel="stylesheet" href="assets/css/txt_animation.css">
+
+    <style>
+     
+    </style>
+</head>
+<body>
+    <div>
+        <img class="logo" src="assets/img/MAIN LOGO 1.png" alt="">
+    </div>
+
+<div class="body0">
+    <div class="container">
+        <div id="errordiv">
+            <!-- Error message span -->
+                <span id="errormsg"></span>
+        </div>
+    <!-- Div 1 -->
+    <div id="div1" class="select-group">
+        <h3 style="color: #991608;">Start a campaign</h3>
+         <div class="select_topdiv">
+           <div class="top_img"></div>
+            <div class="tab_indicator">1/3</div>
+        </div>
+
+        <label  for="selectCategory">Select Category:</label>
+        <select class="border_div0" id="selectCategory">
+            <option value="">--Select Category--</option>
+            <option value="social">Social Media & Engagement</option>
+            <option value="mobile">Mobile Application</option>
+            <option value="votes">Votes</option>
+            <option value="music">Music</option>
+            <option value="review">Review</option>
+            <option value="create_mine">I want to create my own task</option>
+        </select>
+
+        <label for="selectPlatform">Select Platform:</label>
+        <select id="selectPlatform">
+            <option value="">--Select Platform--</option>
+        </select>
+
+        <div class="space"></div>
+        <div class="btnDiv">
+             <div id="next" class="btns"><span>next</span></div>
+
+        </div>
+
+        
+    </div>
+
+    <!-- Div 2 -->
+    <div id="div2" class="select-group">
+        <div class="select_topdiv">
+               <div class="top_img"> <img class="div_backicon" id="div2_backicon" src="assets/img/icons8-arrow-back-50.png" alt=""></div> <div class="tab_indicator"> 2/3</div>
+        </div>
+          <label>What should freelancers do (todo)</label>
+        <select class="border_div0" id="taskOptions">
+            <option value="">--Select option--</option>
+        </select>
+
+        <div id="amount_2_pay_div0" class="myown_div1">
+            <label>Amount you want to pay per freelancers</label>
+            <div class="amount_2_pay_div1">
+              <input id="amount_2_pay"  min="1000" type="number" placeholder="starts from N100">
+            </div>
+        </div>
+
+          <label>How many freelancer do you need?</label>
+        <input class="border_div0" id="num_of_freelancers" min="1" type="number">
+
+       <div class="premium_freelancer">
+             <div class="Premiumspandiv"><span>Premium freelancers</span></div> <div  class="Premiumcheckboxdiv"> <input id="premium_checkbox" type="checkbox"></div>
+       </div>
+       <div class="space"></div>
+
+       <div class="btnDiv">
+            <div id="back2" class="back">
+                <span class="spanback">back</span>
+            </div>
+            <div id="next1" class="btns">
+                <span>next</span>
+            </div>
+       </div>
+       
+         
+    </div>
+
+
+    <!-- Div 3 -->
+    <div id="div3" class="select-group">
+            <div class="select_topdiv">
+                   <div class="top_img"><img class="div_backicon" id="div3_backicon" src="assets/img/icons8-arrow-back-50.png" alt=""></div> <div class="tab_indicator">3/3</div>
+            </div>
+        
+       
+        <div class="myown_div1"  id="titlediv">
+             <label>Title</label>
+            <input class="myown_divinput" id="title"  maxlength="50" type="text" placeholder="Enter what you want done?(max 50 words)">
+        </div>
+
+        <label>Provide link to post</label>
+        <input class="border_div0" id="link_2_post"  type="link"  maxlength="200" placeholder="https//tiktok.com/...">
+
+    <label>Required Proof</label>
+<select id="proof" class="border_div0">
+    <option value="">Select Proof</option> <!-- Default "empty" option -->
+    <option value="Link">Link</option>
+    <option value="Username">Username</option>
+    <option value="Image Link">Image link</option>
+    <option value="Video Link">Video link</option>
+</select>
+
+
+        <div class="myown_div1">
+             <label>Post more info or instructions</label>
+            <input class="border_div0" id="Instructions" type="text" maxlength="200" placeholder="Enter more info or instructions on  what you want done? (max 200 words)">
+        </div>
+
+        <div class="space"></div>
+        <div class="btnDiv">
+           
+            <div id="back3" class="back"><span class="spanback">back</span></div>
+             <div id="Summary" class="btns"><span>View Summary</span></div>
+        </div>
+    </div>
+
+
+    <!-- Div 3 -->
+    <div id="div4" class="select-group">
+         <h3 class="hed">Task summary</h3>
+                   <div class="select_topdiv">
+                     <div class="top_img"><img class="div_backicon" id="div4_backicon" src="assets/img/icons8-arrow-back-50.png" alt=""> </div> <div class="tab_indicator">4/4</div>
+        </div>
+       
+       <div class="confrim_container">
+            <div class="row">
+                <div class="column1"><span>Category</span></div> <div id="category" class="column2"><span id="category"></span></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>Platform</span></div> <div id="" class="column2"><span id="platform"></span></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>Number Of freelancers</span></div> <div class="column2"><span  id="number_of_freelancers"></span></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>To do </span></div> <div  class="column2"><span id="todo"></span></div>
+            </div>
+             <div class="row0">
+                <div class="column1"><span>To pay freelancers (Naira)</span></div> <div  class="column2"><span id="pay_freelancers"></span></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Premium Freelancer</span></div> <div class="column2"><span id="premium_freelancer"></span></div>
+            </div>
+             <div class="row0">
+                <div class="column1"><span>Title</span></div> <div class="column2"><span  id="title_0"></span></div>
+            </div>
+             <div class="row0">
+                <div class="column1"><span>Instructions</span></div> <div class="column2"><span  id="Instructions_0"></span></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Provided Link</span></div> <div id="" class="column2"><span id="link"></span></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Proof</span></div> <div  class="column2"><span id="Proof1"></span></div>
+            </div>
+          
+            
+       </div>
+
+</div>
+
+
+</div>
+
+ </div>
+
+<div class="bod">
+     <div class="txt_animation"><span id="txt_animation"></span> </div>
+
+    <div class="checkout_div">
+         <div id="checkout_container">
+          
+             <div class="row">
+                <div class="column1"><span>Funds Balance</span></div> <div class="column2"><span  id="Funds_balance"> <%= walletBalance %> </span></div>
+            </div>
+             
+             <div class="row">
+                <div class="column1"><span>Your Fee (Naira)</span></div> <div id="" class="column2"><span id="tasker_fee"></span></div>
+            </div> 
+              <div class="space"></div>
+
+         <div class="btnDiv">
+            
+            <div id="back4" class="back"><span class="spanback">back</span></div>
+
+             <div id="checkout" class="btns"><span>Confirm</span></div>
+
+         </div>
+
+    </div>
+    </div>
+
+
+</div>
+
+
+<!-- Include the external JS file -->
+<script src="assets/js/create_task.js"></script>
+<script src="assets/js/TaskPoints.js"></script>
+<script src="assets/js/create_task_checkout.js"></script>
+
+
+</body>
+</html>

@@ -60,12 +60,9 @@
 
 
 .nav-text {
-    font-size: 19px;
+    font-size: 19px; color: #4a4949;
 }
 
-.overview-text {
-    color: #a30a19;
-}
 
 .nav-options-support{
      position: absolute;
@@ -75,9 +72,6 @@
 
 }
 
-.task-center-text, .wallet-text, .support-text {
-    color: #4a4949;
-}
 
 .task-btn {
     text-align: center;
@@ -219,6 +213,12 @@
     overflow-y: auto;
 }
 
+/* Add this to ensure the side menu options show pointer cursor */
+.nav-options {
+    cursor: pointer;
+}
+
+
 /* Media Queries */
 @media (max-width: 600px) {
     .d-flex {
@@ -289,6 +289,25 @@
     justify-content: start;
 }
 
+.cards {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 0.1px solid var(--bs-red);
+    width: 130px;
+    height: 138px;
+}
 
+.card_txt2 {
+      margin-top: 10px;
+      
+}
+
+.task-count {
+      margin-top: 10px;
+        font-size: 21px;
+        text-align: start;
+   
+}
 
 }

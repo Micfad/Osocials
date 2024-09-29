@@ -1,0 +1,207 @@
+
+.Available {
+    width: 100%;
+    background: #fff2f2;
+    border-radius: 15px;
+
+   
+   
+}
+
+.Available_flex {
+            width: 100%;                 /* Full width of the screen */
+            overflow-x: auto;
+            overflow-y: hidden;            /* Enables horizontal scrolling */
+            white-space: nowrap;         /* Keeps children in one line */
+             /* Background color */
+            padding: 10px;  
+}
+
+
+.scroll_items {
+   display: inline-block;       /* Inline block to align items horizontally */
+            width: 150px;                /* Fixed width for each item */
+            height: 20px;               /* Fixed height for each item */
+            margin-right: 10px;          /* Spacing between items */
+            text-align: center;          /* Center text horizontally */
+            line-height: 30px;          /* Center text vertically */
+            color: #686868;            /* Text color */
+            font-size: 18px;  
+}
+
+#available_task_click{
+     color: #d41515;  
+}
+
+
+.task_type_indicator {
+    width: 100%; display: none;
+    height: 4px;
+    background: #910909;
+    margin-top: 6px;
+}
+
+
+.top_2{
+    display: flex; padding: 10px;
+    
+}
+
+.gen-lists{
+    display: flex;  font-size: 10px;
+    margin-bottom: 15px; width: 300px;
+    margin-right: 5px;
+}
+
+.inner-gen-lists{
+    display: flex; 
+    color: #8f0d19
+}
+
+.genListImg{
+    width: 10px; height: 10px;
+    margin-top: 3px;
+   
+}
+
+
+.points,
+.dates {
+    width:150px;
+    text-align: center;
+}
+
+#nothing{
+    height: 300px; width: 100%;
+    text-align: center; margin-top: 50px;
+    color: #7a040f; display: none;
+}
+
+#nothing img{
+    width: 60px; margin-bottom: 20px;
+
+}
+
+.task-amount-display {
+    text-align: center;
+    width: 150px;
+   
+}
+
+.tasks_loop_divs {
+    height: 50px; display: flex;
+    border-top-style: solid;
+    border-top-color: #ffffff;
+     padding: 10px;
+}
+
+
+
+.tasks_click_divs {
+    width: 300px; display: flex;
+   margin-right: 5px; 
+}
+
+.task_txt_div{
+    white-space: nowrap;         /* Prevents the text from wrapping to the next line */
+    overflow: hidden;            /* Ensures any overflowing content is hidden */
+    text-overflow: ellipsis;     /* Adds the ellipsis (...) when text overflows */
+    width: 80%;
+  
+}
+
+.dinamic_img2_div{
+    width: 20%; padding-top: 6px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.dinamic_img {
+    width: 20px; height: 17px;
+    margin-top: 5px;  display: none;
+}
+
+#dinamic_img {
+    display: block;
+  
+}
+
+.dinamic_img2{
+     width: 15px; height: 15px;
+     display: none;
+}
+
+#task_txt {
+    margin-left: 8px;
+}
+
+
+
+/*
+
+.top_2{
+    padding: 10px;
+}
+.gen-lists{
+    justify-content: center;
+  
+}
+    */
+
+
+/* Media Query for screens with a maximum width of 480px (mobile) */
+@media screen and (max-width: 480px) {
+    ::-webkit-scrollbar {
+    display: none;               /* For Chrome, Safari, and Opera - hides scrollbar */
+}
+    .Available {
+        border-radius: 5px;
+    }
+
+
+.gen-lists{
+ width: 50%;
+}
+.genlistSpanDiv{
+    display: none;
+}
+
+
+.points {
+    width:20%;
+    text-align: center; 
+}
+
+.dates {
+    width:30%;  
+    text-align: center; 
+}
+
+#nothing{
+    height: 250px;
+}
+
+
+.task-amount-display {
+    width: 40%; 
+   
+}
+
+
+
+
+.tasks__divs {
+    width: 50%; display: flex;
+   margin-right: 5px; 
+}
+
+.tasks__divs img {
+    width: 20px;
+    height: 17px;
+}
+
+
+
+}
+

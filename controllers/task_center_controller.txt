@@ -1,0 +1,55 @@
+const db = require('../db'); // Database connection
+const ServerTaskPoints = require('../models/server_task_points'); // Import the ServerTaskPoints class
+
+class get_available_Task {
+    // Retrieve first batch of tasks (20 tasks) and handle pagination
+    static getTasks(req, res) {
+        let { batch = 0 } = req.query; // Get the batch from the request query, default is 0 (first batch)
+        const tasksPerPage = 20;
+        const offset = batch * tasksPerPage;
+
+        const query = `SELECT task_title, todo, points_to_pay, premium_freelancer, created_at 
+                       FROM client_task_table 
+                       WHERE status = 'active'
+                       ORDER BY created_at DESC
+                       LIMIT ?, ?`;
+
+        db.query(query, [offset, tasksPerPage], (err, tasks) => {
+            if (err) {
+                console.error('Error retrieving tasks:', err);
+                return res.status(500).json({ error: 'Error retrieving tasks' });
+            }
+
+            // Initialize ServerTaskPoints to calculate points
+            const taskPoints = new ServerTaskPoints();
+            
+            // Process each task
+            const processedTasks = tasks.map(task => {
+                // Determine the task's price based on premium_freelancer and predefined task points
+                let price;
+                if (task.todo === 'Add my own task') {
+                    price = task.points_to_pay; // Use points_to_pay directly for custom tasks
+                } else {
+                    price = taskPoints.getPoints(task.platform, task.todo); // Get task points for predefined tasks
+
+                    // If the task has premium freelancer, multiply points by 4
+                    if (task.premium_freelancer === 1) {
+                        price *= 4;
+                    }
+                }
+
+                return {
+                    taskTitle: task.todo === 'Add my own task' ? task.task_title : task.todo,
+                    points: price,
+                    date: task.created_at
+                };
+            });
+
+            // Return processed tasks as JSON
+            res.json({ tasks: processedTasks });
+        });
+    }
+
+}
+
+module.exports = get_available_Task;

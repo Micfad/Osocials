@@ -1,0 +1,41 @@
+@keyframes blinkText {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dotsLoading {
+    0% {
+        content: "";
+    }
+    33% {
+        content: ".";
+    }
+    66% {
+        content: "..";
+    }
+    100% {
+        content: "...";
+    }
+}
+
+.blink {
+    animation: blinkText 1s infinite;
+}
+
+.dots::after {
+    content: "";
+    animation: dotsLoading 1.5s infinite;
+}
+
+.txt_animation {
+    color: red; text-align: center;
+    width: 100%; margin-top: 20px;
+    font-style: italic;
+}

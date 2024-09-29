@@ -13,7 +13,8 @@
       <section class="register-photo">
         <div class="form-container">
           <div class="image-holder"></div>
-          <form id="loginForm" method="post" onsubmit="return validateForm()">
+          <!-- Specify the form action to post to your backend login endpoint -->
+          <form id="loginForm" method="post" action="/login" onsubmit="return validateForm()">
             <h2 class="text-center" style="color: #800020"><strong>Login</strong></h2>
             <div class="mb-3">
               <span id="ErrorMsg" class="errMsg" style="color: var(--bs-red); margin-top: 10; margin-bottom: 10"></span>
@@ -24,7 +25,6 @@
             </div>
             <div class="mb-3"></div>
             <div class="mb-3">
-             
             </div>
             <div class="mb-3">
               <button class="btn btn-primary d-block w-100" type="submit" style="background: #800020; color: rgb(255, 255, 255)">
@@ -36,7 +36,7 @@
         </div>
       </section>
     </div>
-    
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     
@@ -49,7 +49,6 @@
         // Get form values
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-        const agree = document.getElementById("agree").checked;
 
         // Email regex pattern to check valid email format
         const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
@@ -65,8 +64,6 @@
           document.getElementById("ErrorMsg").innerHTML = "Password must be at least 6 characters long.";
           return false; // Prevent form submission
         }
-
-      
 
         // If all validation passes, allow form submission
         return true;

@@ -1,0 +1,309 @@
+
+
+body{
+    background: #ffffff;
+    font-family:sans-serif;
+}
+
+
+
+.logo{
+    width: 35px; height: 22px;
+    margin: 20px 0px 0px 20px;
+}
+
+
+
+
+.body0{
+    display: flex; justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* Container styles */
+.container {
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 5px 15px 0px rgba(246, 203, 203, 0.3);
+    background-color: rgb(255, 255, 255);
+    margin-top:100px;
+    position: relative;
+    top: 50%; box-shadow: #7b7b7b;
+}
+
+.hed{
+    color: #991608;
+}
+
+#errordiv{
+    width: 385px; text-align: center; 
+    padding: 10px;
+     background: rgb(158, 3, 3);
+     border-radius: 5px; display: none;
+     color: #fff; 
+}
+
+
+/* Hide all select groups by default except div1 */
+.select-group {
+    display: none; margin-top: 20px;
+  
+}
+
+.select_topdiv{
+    display: flex;
+    width: 100%; margin-bottom: 20px;
+}
+.tab_indicator{
+    width: 50%;  text-align: end;
+    padding-right: 10px;
+    color: #7b7b7b;
+}
+
+.top_img{
+    width: 50%;
+}
+
+.div_backicon{
+    display: none;
+    width: 20px; height: 20px;
+}
+
+
+#div1 {
+    display: block;
+}
+
+
+/* Style the input fields */
+label{
+    color: #7b7b7b;
+    margin-left: 20px;
+}
+
+select {
+    width: 370px;
+}
+
+input {
+    width: 350px;
+}
+
+input, select {
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+    margin: auto; color: #671107;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #c9191935;
+    font-size: 16px;
+}
+
+.premium_freelancer{
+    display: flex; color:  #7b7b7b;;
+    
+}
+
+.Premiumcheckboxdiv{
+    width: 30px;
+}
+
+#premium_checkbox{
+    width: 10px; margin-top: 3px;
+}
+
+
+.myown_div{
+      display: none;
+
+}
+
+
+/* Flexbox for buttons */
+.btnDiv {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 30px;
+    width: 400px;
+}
+
+
+/* Style the buttons */
+.btns {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #9b0909;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.back {
+     cursor: pointer; padding-top: 10px;
+     color: #7b7b7b;
+    
+}
+
+
+/* Image and step indicator styling */
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.space {
+    width: 400px; height: 50px;
+}
+
+/* Rows and columns in the confirmation container */
+.confrim_container {
+    margin-top: 20px;
+}
+
+
+
+.row, .row0 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc; /* Set color and thickness */
+    padding-bottom: 10px; /* Optional: for some space between content and the border */
+}
+
+
+.row0 {
+    display:none;
+}
+
+.column1 {
+    font-weight: bold; color: #7b7b7b;
+    width: 50%;
+}
+
+.column2 {
+    display: inline-block;
+    text-align: right; color: #671107;
+    width: 50%; padding-left: 10px;
+     white-space: nowrap; /* Prevent the text from wrapping to the next line */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add "..." when the content overflows */
+    vertical-align: middle; /* Align the text vertically in the middle */
+
+}
+
+.checkout_div {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#checkout_container{
+    display: none;
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    margin-top:10px;
+    position: relative;
+    top: 50%;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 500px) {
+    /* Adjust container width for mobile */
+
+    .body0{
+    margin-bottom: 20px;
+}
+    .container, #checkout_container {
+        width: 300px;
+        padding: 15px;
+
+        margin-top: 35px;
+    }
+
+ #errordiv{
+    width: 285px;
+}
+
+    /* Adjust the space to fit mobile */
+    .space {
+        width: 100%; 
+        height: 30px;
+    }
+
+    /* Adjust buttons for mobile */
+    .btnDiv {
+        bottom: 10px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btns{
+        width: 300px;
+    }
+
+    .back{
+        display: none;
+    }
+
+    /* Adjust inputs and selects to fit mobile */
+
+select {
+    width: 275px;
+}
+
+input {
+    width: 250px;
+}
+
+input, select {
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+
+    /* Adjust checkbox label and input alignment */
+    .premium_freelancer {
+           width: 200px;
+    }
+
+
+#premium_checkbox{
+    margin-left: 10px;
+      width: 15px; margin-top: 3px;
+}
+
+    /* Adjust text for mobile devices */
+    .tab_indicator {
+        font-size: 16px;
+        padding-right: 10px;
+    }
+
+    /* Adjust back icons */
+    .div_backicon {
+        display: block;
+    
+    }
+
+    
+    /* Adjust the font sizes */
+    label {
+        font-size: 14px;
+    }
+
+    /* Adjust confirmation container */
+    .confrim_container .row, .confrim_container .row0 {
+        padding-bottom: 5px;
+    }
+}

@@ -1,0 +1,10 @@
+node app.js
+
+npm run start
+
+
+http://localhost:3000/login
+
+johndoe@example.com
+
+supersecretpassword
