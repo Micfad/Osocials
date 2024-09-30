@@ -24,7 +24,8 @@ $(document).ready(function() {
             availableTaskHandler.fetchTasks(currentBatch);
         }
     });
-});
+
+
 
 // Event listeners for click events
 
@@ -54,3 +55,8 @@ $('#available_task_click').click(function() {
     currentBatch = 0; // Reset batch
     availableTaskHandler.fetchTasks(currentBatch); // Fetch available tasks
 });
+
+
+    
+});
+

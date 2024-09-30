@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="assets/css/_task.css">
+    <link rel="stylesheet" href="assets/css/txt_animation.css">
+
+    <style>
+     
+    </style>
+</head>
+<body>
+    <div>
+        <img class="logo" src="assets/img/MAIN LOGO 1.png" alt="">
+    </div>
+
+<div class="body0">
+    <div class="container">
+        <div id="errordiv">
+            <!-- Error message span -->
+                <span id="errormsg"></span>
+        </div>
+
+    <!-- Div 3 -->
+    <div id="div4" class="select-group">
+         <h3 class="hed">Edit Your Task</h3>
+                   <div class="select_topdiv">
+                    <!-- inject platform logo here dynamically -->
+                     <div class="top_img"><img class="div_backicon"  src="assets/img/icons8-arrow-back-50.png" alt=""> </div> <div class="tab_indicator">4/4</div>
+                 </div>
+       
+       <div class="confrim_container">
+            <div class="row">
+                <div class="column1"><span>Category</span></div> <div id="category" class="column2"><input  type="text" id="category"></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>Platform</span></div> <div id="" class="column2"><input  type="text" id="platform"></input></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>Number Of freelancers</span></div> <div class="column2"><input  type="number"  id="number_of_freelancers"></input></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>To do </span></div> <div  class="column2"><input  type="text" id="todo"></input></div>
+            </div>
+             <div class="row0">
+                <div class="column1"><span>To pay freelancers (Naira)</span></div> <div  class="column2"><input  type="number" id="pay_freelancers"></input></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Premium Freelancer</span></div> <div class="column2"><input  type="checkbox" id="premium_freelancer"></input></div>
+            </div>
+             <div class="row0">
+                <div class="column1"><span>Title</span></div> <div class="column2"><input  type="text"  id="title"></input></div>
+            </div>
+             <div class="row0">
+                <div class="column1"><span>Instructions</span></div> <div class="column2"><input  type="text"  id="Instructions_0"></input></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Provided Link</span></div> <div id="" class="column2"><input  type="text" id="link"></input></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Proof</span></div> <div  class="column2"><input  type="text" id="Proof"></input></div>
+            </div>
+            <div class="row"></div>
+                <div class="column1"><span>Deadline</span></div> <div  class="column2"><span id="Deadline"></span></div>
+            </div>
+          
+            
+       </div>
+
+</div>
+
+
+</div>
+</div>
+
+<!-- Include the external JS file -->
+<script src="assets/js/create_task.js"></script>
+<script src="assets/js/TaskPoints.js"></script>
+<script src="assets/js/create_task_checkout.js"></script>
+
+
+</body>
+</html>

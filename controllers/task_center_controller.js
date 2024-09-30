@@ -20,7 +20,8 @@ class taskCenterController {
             return {
                 taskTitle: task.todo === 'Add my own task' ? task.task_title : task.todo,
                 points: price,
-                date: task.created_at
+                date: task.created_at,
+                 platform: task.platform
             };
         });
     }
@@ -50,7 +51,7 @@ class taskCenterController {
                 return res.json({ tasks: [] }); // Return an empty array if no tasks found
             }
 
-            const processedTasks = this.processTasks(tasks);
+            const processedTasks = taskCenterController.processTasks(tasks);
             res.json({ tasks: processedTasks });
         } catch (err) {
             console.error('Error retrieving tasks:', err);
@@ -84,7 +85,7 @@ class taskCenterController {
                 return res.json({ tasks: [] }); // Return an empty array if no tasks found
             }
 
-            const processedTasks = this.processTasks(tasks);
+            const processedTasks = taskCenterController.processTasks(tasks);
             res.json({ tasks: processedTasks });
         } catch (err) {
             console.error('Error retrieving created tasks:', err);

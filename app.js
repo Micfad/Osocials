@@ -9,6 +9,10 @@ const db = require('./db'); // Database connection
 const CreateTaskController = require('./controllers/create_task_controller'); // Updated path for the controller
 const DashboardController = require('./controllers/DashboardController');
 const taskCenterController = require('./controllers/task_center_controller'); // Import TaskCenterController
+const SignUpController = require('./controllers/SignUpController');
+const MoreInfoController = require('./controllers/MoreInfoController');
+const InsideTaskController = require('./controllers/InsideTaskController');
+
 
 
 
@@ -43,7 +47,28 @@ function checkAuth(req, res, next) {
   }
 }
 
+
 app.get('/', checkAuth, DashboardController.getDashboardData);
+
+// Route to handle sign-up with validation
+app.post('/signup', SignUpController.validateSignUp(), SignUpController.handleSignUp);
+
+// Route to verify email
+app.get('/verify-email', SignUpController.verifyEmail);
+
+// Serve the more_info.html page
+app.get('/more_info', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'more_info.html'));
+});
+
+// Handle the form submission from more_info.html
+app.post('/more_info', MoreInfoController.updatePersonalInfo);
+
+// Route to handle task details page
+app.get('/task/:id', checkAuth, InsideTaskController.getTask);
+
+
+
 
 
 // Route for task center
@@ -51,6 +76,7 @@ app.get('/task_center', checkAuth, (req, res) => {
   const firstName = req.session.firstName || 'User';
   res.render('task_center', { firstName });
 });
+
 
 
 
@@ -124,29 +150,6 @@ app.post('/login', (req, res) => {
   });
 });
 
-// Route to handle signup form submission
-app.post('/signup', (req, res) => {
-  const { username, email, password } = req.body;
-
-  bcrypt.hash(password, 10, (err, hashedPassword) => {
-    if (err) {
-      console.error('Error hashing password:', err);
-      res.send('Error signing up');
-      return;
-    }
-
-    const query = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
-    db.query(query, [username, email, hashedPassword], (err, result) => {
-      if (err) {
-        console.error('Error saving data:', err);
-        res.send('Error signing up');
-        return;
-      }
-
-      res.redirect('/login');
-    });
-  });
-});
 
 // Logout route
 app.get('/logout', (req, res) => {

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Area</title>
+    <link rel="stylesheet" href="assets/css/_task.css">
+
+    <style>
+        .premium_freelancer, span{
+            display: none;
+        }
+
+        .premium_freelancer, img{
+            display: none;
+        }
+     
+    </style>
+</head>
+<body>
+    <div>
+        <img class="logo" src="assets/img/MAIN LOGO 1.png" alt="">
+    </div>
+
+<div class="body0">
+    <div class="container">
+        <div id="errordiv">
+            <!-- Error message span -->
+                <span id="errormsg"></span>
+        </div>
+
+    <!-- Div 3 -->
+    <div id="div4" class="select-group">
+         <h3 class="hed">Task summary</h3>
+                   <div class="select_topdiv">
+                     <div class="top_img">
+
+                        <img class="dinamic_img" id="dinamic_img_default" src="assets/img/icons8-task-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_fb" src="assets/img/icons8-facebook-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_tk" src="assets/img/icons8-tiktok-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_ig" src="assets/img/icons8-instagram-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_tw" src="assets/img/icons8-twitter-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_tele" src="assets/img/icons8-telegram-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_play" src="assets/img/icons8-playstore-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_whats" src="assets/img/icons8-whatsapp-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_yt" src="assets/img/icons8-youtube-50.png" />
+                        <img class="dinamic_img" id="dinamic_img_snaps" src="assets/img/icons8-snapchat-50.png" />
+
+
+
+                    </div>
+                    <div class="tab_indicator"></div>
+                 </div>
+       
+       <div class="confrim_container">
+            
+            <div class="row0">
+                <div class="column1"><span>Title</span></div> <div class="column2"><span  id="title_0"></span> <%= task.task_title %></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Category</span></div> <div id="category" class="column2"><span id="category"><%= task.category %></span></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>Platform</span></div> <div id="" class="column2"><span id="platform"><%= task.platform %></span></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>Number Of freelancers</span></div> <div class="column2"><span  id="number_of_freelancers"> <%= task.number_of_freelancers %></span></div>
+            </div>
+             <div class="row">
+                <div class="column1"><span>To do </span></div> <div  class="column2"><span id="todo"><%= task.todo %></span></div>
+            </div>
+             <div class="row0">
+                <div class="column1"><span>Your pay</span></div> <div  class="column2"><span id="pay_freelancers"><%= task.points_to_pay %></span></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Freelancer level</span></div> <div id="premium_freelancer" class="column2"><span id="premium_freelancer"> <img src="/public/assets/img/icons8-star-48.png" alt=""> <img src="/public/assets/img/icons8-star-48.png" alt=""></span></div>
+            </div>
+             <div class="row0">
+                <div class="column1"><span>Instructions</span></div> <div class="column2"><span  id="Instructions_0"><%= task.instructions %></span></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Provided Link</span></div> <div id="" class="column2"><span id="link"><a href="<%= task.task_link %>"><%= task.task_link %></a></span></div>
+            </div>
+            <div class="row">
+                <div class="column1"><span>Proof</span></div> <div  class="column2"><span id="Proof1"><%= task.proof %></span></div>
+            </div>
+            <div class="row"></div>
+                <div class="column1"><span>Deadline</span></div> <div  class="column2"><span id="Deadline"><%= task.deadline %></span></div>
+            </div>
+          
+            
+    </div>
+
+</div>
+
+
+</div>
+
+<div class="body0">
+     <div class="client_name_div"></div>
+                <div class="column1"><span>CLient:</span></div> <div id="client_name" class="column2"><span id="category"><%= clientUsername %></span></div>
+                <div><span>report client</span></div>
+            </div>
+</div>
+
+
+<!-- Include the external JS file -->
+<script src="assets/js/TaskPoints.js"></script>
+
+
+</body>
+</html>

@@ -2,8 +2,16 @@ node app.js
 
 npm run start
 
+ to create task for testing run this...
+ script by executing  in your terminal : node ./public/test_createTask.js
 
-http://localhost:3000/login
+  this will delete all tasks for...
+   a specific client_id (in this case, currentUserId is set to 1): node ./public/test_deleteTasks.js
+
+
+
+
+http://localhost:3000
 
 johndoe@example.com
 

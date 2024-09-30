@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+const util = require('util');
 require('dotenv').config(); // To use environment variables
 
 // Create a MySQL connection
@@ -9,8 +10,6 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME
 });
 
-
-
 // Connect to MySQL
 db.connect((err) => {
   if (err) {
@@ -19,5 +18,8 @@ db.connect((err) => {
   }
   console.log('Connected to MySQL Database');
 });
+
+// Promisify the query method to use async/await
+db.query = util.promisify(db.query);
 
 module.exports = db; // Export the connection
